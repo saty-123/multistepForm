@@ -19,4 +19,4 @@ jobs:
     - name: Install Dependencies
       run: npm install
     - name: Execute Deployment
-      run: php artisan serve
+      run: php composer.phar install && php artisan migrate && php artisan serve
